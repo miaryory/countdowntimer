@@ -8,14 +8,16 @@
 </head>
 <body>
     <main>
-        <form onsubmit="startTimer(); return false">
+        <form onsubmit="validation(); return false">
             <div id="event-input">
                 <label>Event name</label>
                 <input type="text" placeholder="Event Name">
+                <p class="error-message">Enter the event name</p>
             </div>
             <div id="date-input">
                 <label>Select date</label>
                 <input id="date" type="date" max="2100-12-31">
+                <p class="error-message">Select a date</p>
             </div>
             <div id="time-input">
                 <label>Select time</label>
@@ -24,7 +26,8 @@
             <button>Start</button>
         </form>
 
-        <p class="event-name"></p>
+        <h1 class="event-name"></h1>
+        <p class="remaining"></p>
         
         <div class="countdown">
 

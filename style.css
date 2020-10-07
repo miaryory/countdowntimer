@@ -45,6 +45,13 @@ form>div{
     display: block;
 }
 
+#event-input .error-message, #date-input .error-message{
+    display: none;
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgb(243, 97, 97);
+}
+
 .countdown{
     display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

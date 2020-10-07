@@ -1,9 +1,27 @@
+function validation(){
+    select("#event-input .error-message").style.display="none";
+    select("#date-input .error-message").style.display="none";
+
+    if( select("#event-input input").value.length ==  0){
+        select("#event-input .error-message").style.display="block";
+    }
+    if( select("#date-input input").value ==  ""){
+        select("#date-input .error-message").style.display="block";
+    }
+    else{
+        startTimer();
+    }
+}
+
+
 function startTimer(){
+    let date=new Date(select("#date").value);
+    //let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     select(".countdown").style.display="grid";
     select(".event-name").style.display="block";
     select(".event-name").innerText=select("#event-input input").value;
+    // select(".remaining").innerText="Remaining time unitl: "+ date.getDay()+"-"+months[date.getMonth()]+"-"+date.getFullYear();
     select("form").classList.add("hide");
-
 
     let countDownDate = new Date(select("#date").value+"T"+select("#time").value).getTime();
 
@@ -31,6 +49,8 @@ function startTimer(){
             clearInterval(x);
         }
     }, 1000);
+
+    
 }
 
 function select(element){
