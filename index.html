@@ -9,14 +9,25 @@
 <body>
     <main>
         <form onsubmit="startTimer(); return false">
-            <label>Event name</label>
-            <input type="text" placeholder="Event Name">
-            <input id="date" type="date" max="2100-12-31">
-            <input id="time" type="time" value="00:00" min="00:00" max="24:00">
+            <div id="event-input">
+                <label>Event name</label>
+                <input type="text" placeholder="Event Name">
+            </div>
+            <div id="date-input">
+                <label>Select date</label>
+                <input id="date" type="date" max="2100-12-31">
+            </div>
+            <div id="time-input">
+                <label>Select time</label>
+                <input id="time" type="time" value="00:00" min="00:00" max="24:00">
+            </div>
             <button>Start</button>
         </form>
+
+        <p class="event-name"></p>
         
         <div class="countdown">
+
             <div class="months">
                 <h1></h1>
                 <p>months</p>

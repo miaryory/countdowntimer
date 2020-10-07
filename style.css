@@ -3,3 +3,60 @@
     padding:0;
     box-sizing: border-box;
 }
+
+.hide{
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    align-items: center;
+}
+
+input, input:focus{
+    height: 50px;
+    width: 20rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+    transition: .35s ease-in-out;
+}
+
+input:focus{
+    border-bottom: 1px solid rgba(30, 144, 219, 0.596);
+}
+
+button{
+    height: 44px;
+    width: 20rem;
+    border: none;
+    outline: none;
+    margin-top: 10%;
+    border-radius: 0.3rem;
+}
+
+form>div{
+    margin-top: 10%;
+}
+
+#event-input>*, #date-input>*,#time-input>*{
+    display: block;
+}
+
+.countdown{
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 5%;
+}
+
+.countdown>div{
+    display: inline-block;
+    margin: 2rem;
+    text-align: center;
+}
+
+.countdown>div h1{
+    font-size: 6rem;
+}

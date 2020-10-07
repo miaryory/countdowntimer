@@ -1,4 +1,10 @@
 function startTimer(){
+    select(".countdown").style.display="grid";
+    select(".event-name").style.display="block";
+    select(".event-name").innerText=select("#event-input input").value;
+    select("form").classList.add("hide");
+
+
     let countDownDate = new Date(select("#date").value+"T"+select("#time").value).getTime();
 
     // Update the count down every 1 second
