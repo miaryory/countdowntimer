@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <form onsubmit="startTimer(); return false">
+            <label>Event name</label>
+            <input type="text" placeholder="Event Name">
+            <input id="date" type="date" max="2100-12-31">
+            <input id="time" type="time" value="00:00" min="00:00" max="24:00">
+            <button>Start</button>
+        </form>
+        
+        <div class="countdown">
+            <div class="months">
+                <h1></h1>
+                <p>months</p>
+            </div>
+            <div class="days">
+                <h1></h1>
+                <p>days</p>
+            </div>
+            <div class="hours">
+                <h1></h1>
+                <p>hours</p>
+            </div>
+            <div class="minutes">
+                <h1></h1>
+                <p>minutes</p>
+            </div>
+            <div class="seconds">
+                <h1></h1>
+                <p>seconds</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
